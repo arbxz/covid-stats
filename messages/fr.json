@@ -1,0 +1,49 @@
+{
+  "HomePage": {
+    "title": "Bonjour le monde!"
+  },
+  "Error": {
+    "description": "<p>Nous avons malheureusement rencontré une erreur.</p><p>Vous pouvez essayer de <retry>recharger la page</retry> que vous visitiez.</p>",
+    "title": "Quelque chose s'est mal passé!"
+  },
+  "IndexPage": {
+    "description": "Ceci est un exemple de base qui démontre l'utilisation de <code>next-intl</code> avec le Next.js App Router. Essayez de changer la langue en haut à droite et voyez comment le contenu change.",
+    "title": "exemple next-intl"
+  },
+  "LocaleLayout": {
+    "title": "exemple next-intl"
+  },
+  "LocaleSwitcher": {
+    "label": "Changer de langue",
+    "locale": "{locale, select, fr {fr Francais} en {🇺🇸 Anglais} other {Inconnu}}"
+  },
+  "Manifest": {
+    "name": "exemple next-intl"
+  },
+  "Navigation": {
+    "home": "Accueil",
+    "pathnames": "Chemins"
+  },
+  "NotFoundPage": {
+    "description": "Veuillez vérifier l'adresse dans la barre de navigation ou utilisez la navigation pour aller à une page connue.",
+    "title": "Page non trouvée"
+  },
+  "PageLayout": {
+    "links": {
+      "docs": {
+        "description": "En savoir plus sur next-intl dans la documentation officielle.",
+        "href": "https://next-intl-docs.vercel.app/",
+        "title": "Docs"
+      },
+      "source": {
+        "description": "Parcourir le code source de cet exemple sur GitHub.",
+        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router",
+        "title": "Code source"
+      }
+    }
+  },
+  "PathnamesPage": {
+    "description": "<p>Les chemins sont également internationalisés.</p><p>Si vous utilisez la langue par défaut, l'anglais, vous verrez <code>/en/pathnames</code> dans la barre d'adresse du navigateur sur cette page.</p><p>Si vous changez la langue en allemand, l'URL est localisée en conséquence (<code>/de/pfadnamen</code>).</p>",
+    "title": "Chemins"
+  }
+}
