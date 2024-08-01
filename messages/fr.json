@@ -1,6 +1,8 @@
 {
   "HomePage": {
-    "title": "Bonjour le monde!"
+    "title": "Tableau de bord des statistiques COVID-19",
+    "description": "Restez informé des dernières statistiques sur le COVID-19. Explorez les données en temps réel sur les cas, les guérisons et les vaccinations dans le monde entier, présentées dans un format facile à comprendre.",
+    "dataset": "Ensemble de données COVID-19 utilisé dans ce projet"
   },
   "Error": {
     "description": "<p>Nous avons malheureusement rencontré une erreur.</p><p>Vous pouvez essayer de <retry>recharger la page</retry> que vous visitiez.</p>",
