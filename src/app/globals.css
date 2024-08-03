@@ -33,6 +33,7 @@
   }
 
   .dark {
+    /* --custom-primary: 345 100% 43%; */
     --custom-primary: 155 100% 43%;
     --background: 20 14.3% 4.1%;
     --foreground: 60 9.1% 97.8%;

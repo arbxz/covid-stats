@@ -2,7 +2,11 @@
   "HomePage": {
     "title": "COVID-19 Statistics Dashboard",
     "description": "Stay informed with the latest COVID-19 statistics. Explore real-time data on cases, recoveries, and vaccinations worldwide, presented in an easy-to-understand format.",
-    "dataset": "COVID-19 dataset used on this project"
+    "dataset": "COVID-19 dataset used on this project.",
+    "lastUpdate": "Last updated: {date}",
+    "totalCases": "Total cases",
+    "totalRecovered": "Total recovered",
+    "visualizeData": "Visualize graphical datasets"
   },
   "Error": {
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",

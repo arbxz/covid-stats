@@ -16,15 +16,13 @@ const HeroCard = ({ title, value, link }: HeroCardProps) => {
         <span className="text-4xl font-semibold mb-4">{formatNumber(value)}</span>
         <span>{title}</span>
       </div>
-      <div className="p-4 group-hover:border-custom-primary border-t-[1px] transition-colors duration-300">
-        <Link
-          href={link}
-          className="flex justify-start items-end text-xs text-left text-slate-500"
-        >
-          View active covid cases datasets.
-          <ArrowRight className="inline ml-2" size={14} />
-        </Link>
-      </div>
+      <Link
+        href={link}
+        className="p-4 group-hover:border-custom-primary border-t-[1px] flex justify-start items-end text-xs text-left text-slate-500 hover:text-custom-primary transition-colors duration-300"
+      >
+        View active covid cases datasets.
+        <ArrowRight className="inline ml-2" size={14} />
+      </Link>
     </div>
   );
 };
