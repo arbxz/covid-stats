@@ -4,6 +4,7 @@ import { getTranslations } from 'next-intl/server';
 
 import HeroCard from '@/components/hero-cards/HeroCard';
 import Navigation from '@/components/navigation/Navigation';
+import PieChart from '@/components/piechart/Pierchart';
 import { convertToDateTime } from '@/utils/utils';
 
 // TODO Add a comment to describe the function
@@ -62,12 +63,12 @@ export default async function Home() {
             <HeroCard
               title={t('totalCases')}
               value={globalCovidData.cases}
-              link="/active-cases"
+              link="/global-data"
             />
             <HeroCard
               title={t('totalRecovered')}
               value={globalCovidData.recovered}
-              link="/recovered"
+              link="/global-data"
             />
           </div>
         </div>
@@ -86,6 +87,8 @@ export default async function Home() {
           datasets
           <div className="w-0 transition-all duration-300 h-2 md:h-3 bg-custom-primary group-hover:w-40 mx-auto md:mx-0 group-hover:md:w-64 mt-4"></div>
         </h2>
+
+        <PieChart />
       </section>
     </main>
   );

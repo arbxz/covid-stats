@@ -1,15 +1,19 @@
 import { Activity } from 'lucide-react';
+import Link from 'next/link';
 
 import LocaleSwitcher from '@/components/locale-switch/LocaleSwitcher';
 import { ModeToggle } from '@/components/theme/Theme-toggle';
 
 const Navigation = () => {
   return (
-    <nav className="flex items-center justify-between gap-4 w-full">
-      <div className="group bg-custom-primary text-white dark:bg-primary-foreground border-custom-primary flex gap-4 items-center px-4 py-2 border-[1px] rounded-full">
+    <nav className="flex items-center justify-between gap-4 w-full z-50">
+      <Link
+        href="/"
+        className="group bg-custom-primary text-white dark:bg-primary-foreground border-custom-primary flex gap-4 items-center px-4 py-2 border-[1px] rounded-full"
+      >
         <Activity size={16} />
         <span className="text-sm">covid-stats</span>
-      </div>
+      </Link>
       <ul className="hidden lg:flex items-center gap-4 text-sm">
         <li>
           <a
