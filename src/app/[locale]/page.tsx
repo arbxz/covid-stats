@@ -1,10 +1,11 @@
-import Link from "next/link";
-import Image from "next/image";
-import { useTranslations } from "next-intl";
-import { Activity, ArrowRight, Database } from "lucide-react";
-import { formatNumber } from "@/utils/utils";
-import LocaleSwitcher from "@/components/locale-switch/LocaleSwitcher";
-import { ModeToggle } from "@/components/theme-toggle";
+import { Activity, ArrowRight, Database } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+
+import LocaleSwitcher from '@/components/locale-switch/LocaleSwitcher';
+import { ModeToggle } from '@/components/theme-toggle';
+import { formatNumber } from '@/utils/utils';
 
 // TODO remove unused imports
 // TODO fix imports sorting
@@ -13,7 +14,7 @@ import { ModeToggle } from "@/components/theme-toggle";
 // TODO convert cards into components
 
 export default function Home() {
-  const t = useTranslations("HomePage");
+  const t = useTranslations('HomePage');
 
   return (
     <main className="flex flex-col min-h-screen p-4 md:p-8">
@@ -26,14 +27,16 @@ export default function Home() {
           <li>
             <a
               className="py-2 hover:pb-4 border-custom-primary border-b-[1px] hover:border-b-2 transition-all duration-300"
-              href="/about">
+              href="/about"
+            >
               Active cases
             </a>
           </li>
           <li>
             <a
               className="py-2 hover:pb-4 border-custom-primary border-b-[1px] hover:border-b-2 transition-all duration-300"
-              href="/about">
+              href="/about"
+            >
               Vaccination data
             </a>
           </li>
@@ -54,15 +57,16 @@ export default function Home() {
         />
         <div className="relative w-full text-center md:text-left py-8">
           <h1 className="font-semibold text-4xl lg:text-6xl mb-4 lg:mb-8">
-            {t("title")}
+            {t('title')}
           </h1>
-          <p className="text-md md:text-lg mb-4">{t("description")}</p>
+          <p className="text-md md:text-lg mb-4">{t('description')}</p>
           <div className="lg:text-right">
             <a
               className="px-4 py-1 border-custom-primary text-custom-primary hover:shadow-md transition-all duration-500 border-[1px] rounded-full text-xs"
               href="https://disease.sh"
-              target="_blank">
-              {t("dataset")}
+              target="_blank"
+            >
+              {t('dataset')}
               <Database className="inline-block ml-2" size={12} />
             </a>
           </div>
@@ -78,8 +82,9 @@ export default function Home() {
             </div>
             <div className="p-4 group-hover:border-custom-primary border-t-[1px] transition-colors duration-300">
               <Link
-                href={""}
-                className="flex justify-start items-end text-xs text-left text-slate-500">
+                href={''}
+                className="flex justify-start items-end text-xs text-left text-slate-500"
+              >
                 View active covid cases datasets.
                 <ArrowRight className="inline ml-2" size={14} />
               </Link>
@@ -94,8 +99,9 @@ export default function Home() {
             </div>
             <div className="p-4 group-hover:border-custom-primary border-t-[1px] transition-colors duration-300">
               <Link
-                href={""}
-                className="flex justify-start items-end text-xs text-left text-slate-500">
+                href={''}
+                className="flex justify-start items-end text-xs text-left text-slate-500"
+              >
                 View active covid cases datasets.
                 <ArrowRight className="inline ml-2" size={14} />
               </Link>
