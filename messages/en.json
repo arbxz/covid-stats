@@ -8,6 +8,30 @@
     "totalRecovered": "Total recovered",
     "visualizeData": "Visualize graphical datasets"
   },
+  "GlobalDoughnutChart": {
+    "globalTitle": "Global statistics for COVID-19",
+    "updated": "updated",
+    "cases": "cases",
+    "todayCases": "todayCases",
+    "deaths": "deaths",
+    "todayDeaths": "todayDeaths",
+    "recovered": "recovered",
+    "todayRecovered": "todayRecovered",
+    "active": "active",
+    "critical": "critical",
+    "casesPerOneMillion": "casesPerOneMillion",
+    "deathsPerOneMillion": "deathsPerOneMillion",
+    "tests": "tests",
+    "testsPerOneMillion": "testsPerOneMillion",
+    "population": "population",
+    "oneCasePerPeople": "oneCasePerPeople",
+    "oneDeathPerPeople": "oneDeathPerPeople",
+    "oneTestPerPeople": "oneTestPerPeople",
+    "activePerOneMillion": "activePerOneMillion",
+    "recoveredPerOneMillion": "recoveredPerOneMillion",
+    "criticalPerOneMillion": "criticalPerOneMillion",
+    "affectedCountries": "affectedCountries"
+  },
   "Error": {
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
     "title": "Something went wrong!"

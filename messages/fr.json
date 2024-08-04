@@ -8,6 +8,30 @@
     "totalRecovered": "Total des guérisons",
     "visualizeData": "Visualiser les ensembles de données graphiques"
   },
+  "GlobalDoughnutChart": {
+    "globalTitle": "Statistiques mondiales pour le COVID-19",
+    "updated": "mis à jour",
+    "cases": "cas",
+    "todayCases": "cas aujourd'hui",
+    "deaths": "décès",
+    "todayDeaths": "décès aujourd'hui",
+    "recovered": "rétablis",
+    "todayRecovered": "rétablis aujourd'hui",
+    "active": "actifs",
+    "critical": "critiques",
+    "casesPerOneMillion": "cas par million",
+    "deathsPerOneMillion": "décès par million",
+    "tests": "tests",
+    "testsPerOneMillion": "tests par million",
+    "population": "population",
+    "oneCasePerPeople": "un cas par personnes",
+    "oneDeathPerPeople": "un décès par personnes",
+    "oneTestPerPeople": "un test par personnes",
+    "activePerOneMillion": "actifs par million",
+    "recoveredPerOneMillion": "rétablis par million",
+    "criticalPerOneMillion": "critiques par million",
+    "affectedCountries": "pays affectés"
+  },
   "Error": {
     "description": "<p>Nous avons malheureusement rencontré une erreur.</p><p>Vous pouvez essayer de <retry>recharger la page</retry> que vous visitiez.</p>",
     "title": "Quelque chose s'est mal passé!"
