@@ -55,7 +55,7 @@ const ContinentsBarchart = ({ dataset }: ContinentsBarchartProps) => {
   };
 
   useEffect(() => {
-    const shades = generateShades('#146ef5', '#5587d4', Object.keys(dataset).length);
+    const shades = generateShades('#146ef5', '#b4d2ff', Object.keys(dataset).length);
 
     if (selectedDataFilter === DataOptions.CASES) {
       setData({

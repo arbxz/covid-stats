@@ -38,9 +38,12 @@ const GlobalStatsRow = async ({ stats }: GlobalStatsPiechartProps) => {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-2xl lg:max-w-5xl mx-auto gap-4 md:gap-8 lg:gap-16">
-        <GlobalStatsPiechart dataset={datasetToday} />
-        <GlobalStatsPiechart dataset={datasetTotal} />
-        <GlobalStatsPiechart dataset={datasetPerMillion} />
+        <GlobalStatsPiechart chartTitle={t('titleTodayStats')} dataset={datasetToday} />
+        <GlobalStatsPiechart chartTitle={t('titleGlobalStats')} dataset={datasetTotal} />
+        <GlobalStatsPiechart
+          chartTitle={t('titlePerMillionStats')}
+          dataset={datasetPerMillion}
+        />
       </div>
     </section>
   );

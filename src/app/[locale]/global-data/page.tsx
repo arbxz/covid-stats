@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 
-import ContinentsBarchart from '@/components/continents-stats-charts/ContinentBarchart';
+import ContinentsBarchart from '@/components/global-stats-charts/ContinentBarchart';
 import { ContinentCovidStats } from '@/types/requests';
 
 async function getContinentCovidStats() {
@@ -20,7 +20,7 @@ const Page = async () => {
   const data: ContinentCovidStats[] = await getContinentCovidStats();
 
   return (
-    <main className="flex flex-col min-h-screen justify-center items-center h-full px-4 md:px-8 pt-32">
+    <main className="flex flex-col min-h-screen justify-center items-center h-full px-4 md:px-8 pt-24 md:pt-32">
       <div className="text-center mb-4">
         <h1 className="font-semibold text-4xl lg:text-4xl mb-4 lg:mb-8">{t('title')}</h1>
         <p className="max-w-lg mx-auto">{t('description')}</p>

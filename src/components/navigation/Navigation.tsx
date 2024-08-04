@@ -23,6 +23,14 @@ const Navigation = () => {
             Continent data
           </Link>
         </li>
+        <li>
+          <Link
+            className="py-2 hover:pb-4 border-custom-primary border-b-[1px] hover:border-b-2 transition-all duration-300"
+            href="/history-data"
+          >
+            History
+          </Link>
+        </li>
       </ul>
       <div className="flex items-center gap-4">
         <LocaleSwitcher />

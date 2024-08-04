@@ -7,12 +7,13 @@ import { generateShades } from '@/utils/chart-color-shade';
 
 interface GlobalStatsPiechartProps {
   dataset: {};
+  chartTitle: string;
 }
 
-const GlobalStatsPiechart = async ({ dataset }: GlobalStatsPiechartProps) => {
+const GlobalStatsPiechart = async ({ dataset, chartTitle }: GlobalStatsPiechartProps) => {
   const t = await getTranslations('GlobalDoughnutChart');
 
-  const shades = generateShades('#146ef5', '#5587d4', Object.keys(dataset).length);
+  const shades = generateShades('#146ef5', '#b4d2ff', Object.keys(dataset).length);
 
   const keys = Object.keys(dataset).map((key) => t(key));
 
@@ -32,6 +33,16 @@ const GlobalStatsPiechart = async ({ dataset }: GlobalStatsPiechartProps) => {
 
   const options = {
     responsive: true,
+    borderWidth: 0,
+    plugins: {
+      legend: {
+        display: true,
+      },
+      title: {
+        display: true,
+        text: chartTitle,
+      },
+    },
   };
 
   return <ChartJsBaseChart type="doughnut" data={data} options={options} />;

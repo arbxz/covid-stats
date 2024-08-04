@@ -7,11 +7,8 @@ import HeroCard from '@/components/hero-cards/HeroCard';
 import { CovidGlobalData } from '@/types/requests';
 import { convertToDateTime } from '@/utils/utils';
 
-// TODO Add a comment to describe the functions
-// TODO figure out where to place util functions
 // TODO add not found page
 // Fix fetch error handling
-// Todo add chart where data points can be modified
 // Todo Mobile menu
 
 async function getCovidGlobalData() {
@@ -31,7 +28,7 @@ export default async function Home() {
   const globalCovidData: CovidGlobalData = await getCovidGlobalData();
 
   return (
-    <main className="min-h-screen snap-mandatory snap-y select-none">
+    <main className="min-h-screen snap-mandatory snap-y select-none pt-16 md:pt-8 lg:pt-0">
       <section className="snap-always snap-start flex flex-col min-h-screen p-4 md:p-8">
         <div className="relative overflow-hidden max-w-7xl mx-auto flex-1 flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-16 py-4">
           <Image
@@ -62,24 +59,9 @@ export default async function Home() {
             </div>
           </div>
           <div className="relative z-10 flex flex-col justify-center items-center gap-4 w-full md:w-1/3 lg:w-72">
-            {/* Card section*/}
-            <HeroCard
-              title={t('totalCases')}
-              value={globalCovidData.cases}
-              link="/global-data"
-            />
-            <HeroCard
-              title={t('totalRecovered')}
-              value={globalCovidData.recovered}
-              link="/global-data"
-            />
-            <div className="block md:hidden xl:block">
-              <HeroCard
-                title={t('totalRecovered')}
-                value={globalCovidData.deaths}
-                link="/global-data"
-              />
-            </div>
+            <HeroCard title={t('totalCases')} value={globalCovidData.cases} />
+            <HeroCard title={t('totalRecovered')} value={globalCovidData.recovered} />
+            <HeroCard title={t('totalRecovered')} value={globalCovidData.deaths} />
           </div>
         </div>
         <a href="#covid-charts">
