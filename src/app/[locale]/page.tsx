@@ -2,9 +2,10 @@ import { ChevronDown, Database } from 'lucide-react';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
+import GlobalStatsRow from '@/components/global-stats-charts/GlobalStatsRow';
 import HeroCard from '@/components/hero-cards/HeroCard';
 import Navigation from '@/components/navigation/Navigation';
-import PieChart from '@/components/piechart/Pierchart';
+import { CovidGlobalData } from '@/types/requests';
 import { convertToDateTime } from '@/utils/utils';
 
 // TODO Add a comment to describe the function
@@ -24,7 +25,7 @@ async function getCovidGlobalData() {
 
 export default async function Home() {
   const t = await getTranslations('HomePage');
-  const globalCovidData = await getCovidGlobalData();
+  const globalCovidData: CovidGlobalData = await getCovidGlobalData();
 
   return (
     <main className="max-h-screen snap-mandatory snap-y overflow-y-scroll select-none">
@@ -70,26 +71,21 @@ export default async function Home() {
               value={globalCovidData.recovered}
               link="/global-data"
             />
+            <div className="block md:hidden xl:block">
+              <HeroCard
+                title={t('totalRecovered')}
+                value={globalCovidData.deaths}
+                link="/global-data"
+              />
+            </div>
           </div>
         </div>
         <a href="#covid-charts">
           <ChevronDown className="mx-auto animate-bounce" size={24} />
         </a>
       </section>
-      <section
-        id="covid-charts"
-        className="group snap-always snap-start flex flex-col min-h-screen p-4 md:p-8"
-      >
-        <h2 className="text-center md:text-left text-4xl md:text-6xl font-semibold capitalize">
-          Representations of
-          <br /> COVID-19
-          <br />
-          datasets
-          <div className="w-0 transition-all duration-300 h-2 md:h-3 bg-custom-primary group-hover:w-40 mx-auto md:mx-0 group-hover:md:w-64 mt-4"></div>
-        </h2>
 
-        <PieChart />
-      </section>
+      <GlobalStatsRow stats={globalCovidData} />
     </main>
   );
 }
