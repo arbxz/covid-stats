@@ -32,6 +32,15 @@
     "criticalPerOneMillion": "criticalPerOneMillion",
     "affectedCountries": "affectedCountries"
   },
+  "ContinentPage": {
+    "title": "COVID-19 statistics by continent",
+    "description": "Explore COVID-19 statistics by continent. View the number of cases, recoveries, and deaths for each continent.",
+    "continent": "Continent",
+    "filterby": "Filter by:",
+    "cases": "Number of cases",
+    "recovered": "Recovery made",
+    "deaths": "Death toll"
+  },
   "Error": {
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>",
     "title": "Something went wrong!"

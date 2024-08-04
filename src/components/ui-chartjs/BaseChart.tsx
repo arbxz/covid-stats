@@ -2,19 +2,16 @@
 
 import React, { useEffect, useRef } from 'react';
 
-import Chart, { ChartData, ChartOptions, ChartType } from 'chart.js/auto';
+import Chart from 'chart.js/auto';
 
-interface ChartProps {
-  type: ChartType;
-  data: ChartData;
-  options?: ChartOptions;
-}
+import { ChartProps } from '@/types/chartjs';
 
-const ChartJsPiechart: React.FC<ChartProps> = ({ type, data, options }) => {
+const ChartJsBaseChart: React.FC<ChartProps> = ({ type, data, options }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
+
     let chart: Chart | null = null;
 
     if (canvas) {
@@ -30,7 +27,7 @@ const ChartJsPiechart: React.FC<ChartProps> = ({ type, data, options }) => {
         chart.destroy();
       }
     };
-  }, [type, data, options]);
+  }, [data, options, type]);
 
   return (
     <div className="w-full">
@@ -39,4 +36,4 @@ const ChartJsPiechart: React.FC<ChartProps> = ({ type, data, options }) => {
   );
 };
 
-export default ChartJsPiechart;
+export default ChartJsBaseChart;

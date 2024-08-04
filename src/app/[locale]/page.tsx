@@ -4,12 +4,15 @@ import { getTranslations } from 'next-intl/server';
 
 import GlobalStatsRow from '@/components/global-stats-charts/GlobalStatsRow';
 import HeroCard from '@/components/hero-cards/HeroCard';
-import Navigation from '@/components/navigation/Navigation';
 import { CovidGlobalData } from '@/types/requests';
 import { convertToDateTime } from '@/utils/utils';
 
-// TODO Add a comment to describe the function
+// TODO Add a comment to describe the functions
 // TODO figure out where to place util functions
+// TODO add not found page
+// Fix fetch error handling
+// Todo add chart where data points can be modified
+// Todo Mobile menu
 
 async function getCovidGlobalData() {
   const res = await fetch('https://disease.sh/v3/covid-19/all', {
@@ -28,9 +31,8 @@ export default async function Home() {
   const globalCovidData: CovidGlobalData = await getCovidGlobalData();
 
   return (
-    <main className="max-h-screen snap-mandatory snap-y overflow-y-scroll select-none">
+    <main className="min-h-screen snap-mandatory snap-y select-none">
       <section className="snap-always snap-start flex flex-col min-h-screen p-4 md:p-8">
-        <Navigation />
         <div className="relative overflow-hidden max-w-7xl mx-auto flex-1 flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-16 py-4">
           <Image
             className="absolute hidden lg:block top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 -rotate-12"

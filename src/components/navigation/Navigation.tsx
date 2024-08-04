@@ -2,11 +2,11 @@ import { Activity } from 'lucide-react';
 import Link from 'next/link';
 
 import LocaleSwitcher from '@/components/locale-switch/LocaleSwitcher';
-import { ModeToggle } from '@/components/theme/Theme-toggle';
+import { ModeToggle } from '@/components/theme/ThemeToggle';
 
 const Navigation = () => {
   return (
-    <nav className="flex items-center justify-between gap-4 w-full z-50">
+    <nav className="fixed flex items-center justify-between gap-4 w-screen p-4 z-50 glass">
       <Link
         href="/"
         className="group bg-custom-primary text-white dark:bg-primary-foreground border-custom-primary flex gap-4 items-center px-4 py-2 border-[1px] rounded-full"
@@ -16,20 +16,12 @@ const Navigation = () => {
       </Link>
       <ul className="hidden lg:flex items-center gap-4 text-sm">
         <li>
-          <a
+          <Link
             className="py-2 hover:pb-4 border-custom-primary border-b-[1px] hover:border-b-2 transition-all duration-300"
-            href="/about"
+            href="/global-data"
           >
-            Active cases
-          </a>
-        </li>
-        <li>
-          <a
-            className="py-2 hover:pb-4 border-custom-primary border-b-[1px] hover:border-b-2 transition-all duration-300"
-            href="/about"
-          >
-            Vaccination data
-          </a>
+            Continent data
+          </Link>
         </li>
       </ul>
       <div className="flex items-center gap-4">

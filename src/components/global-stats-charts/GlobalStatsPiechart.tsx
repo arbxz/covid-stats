@@ -2,7 +2,7 @@ import React from 'react';
 
 import { getTranslations } from 'next-intl/server';
 
-import ChartJsPiechart from '@/components/ui-chartjs/Piechart';
+import ChartJsBaseChart from '@/components/ui-chartjs/BaseChart';
 import { generateShades } from '@/utils/chart-color-shade';
 
 interface GlobalStatsPiechartProps {
@@ -34,7 +34,7 @@ const GlobalStatsPiechart = async ({ dataset }: GlobalStatsPiechartProps) => {
     responsive: true,
   };
 
-  return <ChartJsPiechart type="doughnut" data={data} options={options} />;
+  return <ChartJsBaseChart type="doughnut" data={data} options={options} />;
 };
 
 export default GlobalStatsPiechart;
