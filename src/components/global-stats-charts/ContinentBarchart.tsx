@@ -58,46 +58,43 @@ const ContinentsBarchart = ({ dataset }: ContinentsBarchartProps) => {
   useEffect(() => {
     const shades = generateShades('#146ef5', '#b4d2ff', Object.keys(dataset).length);
 
-    if (selectedDataFilter === DataOptions.CASES) {
-      setData({
-        labels: dataset.map((row) => row.continent),
-        datasets: [
-          {
-            label: t('cases'),
-            data: dataset.map((row) => row.cases),
-            backgroundColor: shades,
-            borderColor: shades,
-            borderWidth: 1,
-          },
-        ],
-      });
-    } else if (selectedDataFilter === DataOptions.DEATHS) {
-      setData({
-        labels: dataset.map((row) => row.continent),
-        datasets: [
-          {
-            label: t('deaths'),
-            data: dataset.map((row) => row.deaths),
-            backgroundColor: shades,
-            borderColor: shades,
-            borderWidth: 1,
-          },
-        ],
-      });
-    } else if (selectedDataFilter === DataOptions.RECOVERED) {
-      setData({
-        labels: dataset.map((row) => row.continent),
-        datasets: [
-          {
-            label: t('recovered'),
-            data: dataset.map((row) => row.recovered),
-            backgroundColor: shades,
-            borderColor: shades,
-            borderWidth: 1,
-          },
-        ],
-      });
+    const dataOptions: { [key: string]: { label: string; data: number[] } } = {};
+
+    switch (selectedDataFilter) {
+      case DataOptions.CASES:
+        dataOptions[selectedDataFilter] = {
+          label: t('cases'),
+          data: dataset.map((row) => row.cases),
+        };
+        break;
+      case DataOptions.DEATHS:
+        dataOptions[selectedDataFilter] = {
+          label: t('deaths'),
+          data: dataset.map((row) => row.deaths),
+        };
+        break;
+      case DataOptions.RECOVERED:
+        dataOptions[selectedDataFilter] = {
+          label: t('recovered'),
+          data: dataset.map((row) => row.recovered),
+        };
+        break;
+      default:
+        break;
     }
+
+    setData({
+      labels: dataset.map((row) => row.continent),
+      datasets: [
+        {
+          label: dataOptions[selectedDataFilter].label,
+          data: dataOptions[selectedDataFilter].data,
+          backgroundColor: shades,
+          borderColor: shades,
+          borderWidth: 1,
+        },
+      ],
+    });
   }, [dataset, selectedDataFilter]);
 
   return (
