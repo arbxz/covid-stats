@@ -1,8 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# COVID-19 Statistics Dashboard
 
-## Getting Started
+## Tech Stack
 
-First, run the development server:
+- **Frontend:**
+
+  - React
+  - TypeScript
+  - Next.js
+  - Tailwind CSS
+  - ChartJs
+  - react-chartjs
+  - Shadcn
+  - Lucide icons
+  - Next themes
+
+- **Data:**
+
+  - COVID-19 API
+
+- **Deployment:**
+  - Vercel
+
+#### Getting started
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+##### Run the project
 
 ```bash
 npm run dev
@@ -14,23 +45,28 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Access the project :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result or access PROD on [https://covid-stats-arbaaz-mowlabucus-projects.vercel.app/en](https://covid-stats-arbaaz-mowlabucus-projects.vercel.app/en)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Features :
 
-## Learn More
+- Real-time COVID-19 statistics
+- Interactive charts and graphs
+- Responsive design
+- Multi-language support
 
-To learn more about Next.js, take a look at the following resources:
+### Approach and tradeoffs
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+##### UI/setup :
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+I started the project with a standard nextjs template and added some basic UI from shadcn to help things go faster and to have a nice theme ongoing (I chose shadcn because they use next-themes for their themeing which i'm familliar with.). I also chose next-intl as a trans lib, because of it's flexibility on server/client components ⛷️.
 
-## Deploy on Vercel
+##### Data fetching :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+I just went the basic fetch route for this one, it was mostly fetches so I didn't try complexify things and i wanted to focus more on chartJS. A big tradeoff 🥲 here was error handling, which I left for last but didn't really got time to implement.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+##### ChartJs:
+
+Big focus of the project 🤞
+For chart js i used the main library for thr barchart and piecharts with my own custom component, but I did use react-chart2js lib for the line chart for experimentation.
