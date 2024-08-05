@@ -20,24 +20,21 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineController, LineE
 
 const LineChart = ({ chartData }: LineChartProps) => {
   return (
-    <div className="chart-container">
-      <h2 style={{ textAlign: 'center' }}>Line Chart</h2>
-      <Line
-        data={chartData}
-        options={{
-          responsive: true,
-          plugins: {
-            title: {
-              display: true,
-              text: 'Covid cases rise between 2020-2024',
-            },
-            legend: {
-              position: 'top',
-            },
+    <Line
+      data={chartData}
+      options={{
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Covid cases rise between 2020-2024',
           },
-        }}
-      />
-    </div>
+          legend: {
+            position: 'top',
+          },
+        },
+      }}
+    />
   );
 };
 

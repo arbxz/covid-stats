@@ -53,7 +53,14 @@ const Page = async () => {
   };
 
   return (
-    <main className="md:min-h-screen px-4 md:px-8 pt-24 md:pt-32">
+    <main className="md:min-h-screen px-4 md:px-8 pt-24 md:pt-24">
+      <div className="mb-4 md:max-w-96 md:p-8 p-4 rounded-md bg-custom-primary text-primary-foreground shadow">
+        <h2 className="text-4xl font-bold mb-4">Statistics for COVID-19</h2>
+        <p>
+          The following chart shows the rise in covid cases between the years 2020-2024.
+          The chart shows the number of cases in millions.
+        </p>
+      </div>
       <LineChart chartData={lineChartData} />
     </main>
   );
