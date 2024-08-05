@@ -44,6 +44,7 @@ const ContinentsBarchart = ({ dataset }: ContinentsBarchartProps) => {
   );
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         display: true,
@@ -123,7 +124,9 @@ const ContinentsBarchart = ({ dataset }: ContinentsBarchartProps) => {
       </div>
 
       {data ? (
-        <ChartJsBaseChart type="bar" data={data} options={options} />
+        <div className="mx-auto w-96 h-96 md:w-[512px] md:h-[512px] lg:w-[1024px] lg:h-[512px] xl:w-[1280px] xl:h-[640px]">
+          <ChartJsBaseChart type="bar" data={data} options={options} />
+        </div>
       ) : (
         <LoaderCircle className="text-custom-primary animate-spin" size={48} />
       )}

@@ -37,11 +37,13 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <NextIntlClientProvider messages={messages}>
-            <Navigation />
+            <div className="flex flex-col min-h-screen">
+              <Navigation />
 
-            {children}
+              {children}
 
-            <Footer />
+              <Footer />
+            </div>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>

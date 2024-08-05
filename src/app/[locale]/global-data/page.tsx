@@ -20,7 +20,7 @@ const Page = async () => {
   const data: ContinentCovidStats[] = await getContinentCovidStats();
 
   return (
-    <main className="flex flex-col min-h-screen justify-center items-center h-full px-4 md:px-8 pt-24">
+    <main className=" flex-1 flex flex-col justify-center items-center h-full px-4 md:px-8 pt-24">
       <div className="text-center mb-4">
         <h1 className="font-semibold text-4xl lg:text-4xl mb-4 lg:mb-8">{t('title')}</h1>
         <p className="max-w-lg mx-auto">{t('description')}</p>

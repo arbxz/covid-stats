@@ -29,11 +29,7 @@ const ChartJsBaseChart: React.FC<ChartProps> = ({ type, data, options }) => {
     };
   }, [data, options, type]);
 
-  return (
-    <div className="w-full">
-      <canvas ref={canvasRef}></canvas>
-    </div>
-  );
+  return <canvas ref={canvasRef}></canvas>;
 };
 
 export default ChartJsBaseChart;
