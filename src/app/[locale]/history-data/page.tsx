@@ -22,7 +22,6 @@ const Page = async () => {
   const labels: string[] = Object.keys(data.cases);
 
   const lineChartData = {
-    type: 'line',
     labels: labels,
     datasets: [
       {
@@ -53,7 +52,7 @@ const Page = async () => {
   };
 
   return (
-    <main className="flex-1 flex flex-col px-4 md:px-8 pt-24 md:pt-24 h-full">
+    <main className="relative flex-1 flex flex-col px-4 md:px-8 pt-24 md:pt-24 h-full">
       <div className="mb-4 md:max-w-96 md:p-8 p-4 rounded-md bg-custom-primary text-primary-foreground shadow">
         <h2 className="text-4xl font-bold mb-4">Statistics for COVID-19</h2>
         <p>
@@ -61,6 +60,7 @@ const Page = async () => {
           The chart shows the number of cases in millions.
         </p>
       </div>
+
       <div className="mx-auto w-96 h-96 md:w-[512px] md:h-[512px] lg:w-[1024px] lg:h-[512px] xl:w-[1280px] xl:h-[640px]">
         <LineChart chartData={lineChartData} />
       </div>

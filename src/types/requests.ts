@@ -1,9 +1,9 @@
 export interface CovidGlobalData {
   updated: number;
   cases: number;
-  todayCases: number | null;
+  todayCases: number;
   deaths: number;
-  todayDeaths: number | null;
+  todayDeaths: number;
   recovered: number;
   todayRecovered: number;
   active: number;
@@ -13,9 +13,9 @@ export interface CovidGlobalData {
   tests: number;
   testsPerOneMillion: number;
   population: number;
-  oneCasePerPeople: number | null;
-  oneDeathPerPeople: number | null;
-  oneTestPerPeople: number | null;
+  oneCasePerPeople: number;
+  oneDeathPerPeople: number;
+  oneTestPerPeople: number;
   activePerOneMillion: number;
   recoveredPerOneMillion: number;
   criticalPerOneMillion: number;
@@ -52,4 +52,8 @@ export type CovidHistoryStats = {
   cases: Record<string, number>;
   deaths: Record<string, number>;
   recovered: Record<string, number>;
+};
+
+export type PieChartDataset = {
+  [key: string]: number;
 };

@@ -58,7 +58,7 @@ export default async function Home() {
               </a>
             </div>
           </div>
-          <div className="relative z-10 flex flex-col justify-center items-center gap-4 w-full md:w-1/3 lg:w-72">
+          <div className="relative z-10 grid grid-rows-3 justify-center items-center gap-4 w-full md:w-1/3 lg:w-72">
             <HeroCard title={t('totalCases')} value={globalCovidData.cases} />
             <HeroCard title={t('totalRecovered')} value={globalCovidData.recovered} />
             <HeroCard title={t('totalRecovered')} value={globalCovidData.deaths} />

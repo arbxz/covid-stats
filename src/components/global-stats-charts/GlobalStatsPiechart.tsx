@@ -3,10 +3,11 @@ import React from 'react';
 import { getTranslations } from 'next-intl/server';
 
 import ChartJsBaseChart from '@/components/ui-chartjs/BaseChart';
+import { PieChartDataset } from '@/types/requests';
 import { generateShades } from '@/utils/chart-color-shade';
 
 interface GlobalStatsPiechartProps {
-  dataset: {};
+  dataset: PieChartDataset;
   chartTitle: string;
 }
 
@@ -33,6 +34,7 @@ const GlobalStatsPiechart = async ({ dataset, chartTitle }: GlobalStatsPiechartP
 
   const options = {
     responsive: true,
+    maintainAspectRatio: true,
     borderWidth: 0,
     plugins: {
       legend: {
@@ -45,7 +47,11 @@ const GlobalStatsPiechart = async ({ dataset, chartTitle }: GlobalStatsPiechartP
     },
   };
 
-  return <ChartJsBaseChart type="doughnut" data={data} options={options} />;
+  return (
+    <div className="w-full">
+      <ChartJsBaseChart type="doughnut" data={data} options={options} />
+    </div>
+  );
 };
 
 export default GlobalStatsPiechart;

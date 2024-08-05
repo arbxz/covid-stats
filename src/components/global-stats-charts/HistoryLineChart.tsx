@@ -4,16 +4,23 @@ import React from 'react';
 import { Line } from 'react-chartjs-2';
 
 import {
+  BubbleDataPoint,
   CategoryScale,
   Chart as ChartJS,
+  ChartData,
   LinearScale,
   LineController,
   LineElement,
+  Point,
   PointElement,
 } from 'chart.js';
 
 interface LineChartProps {
-  chartData: any;
+  chartData: ChartData<
+    'line',
+    (number | Point | [number, number] | BubbleDataPoint | null)[],
+    unknown
+  >;
 }
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineController, LineElement);

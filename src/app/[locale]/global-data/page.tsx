@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 
 import ContinentsBarchart from '@/components/global-stats-charts/ContinentBarchart';
@@ -21,11 +22,19 @@ const Page = async () => {
 
   return (
     <main className=" flex-1 flex flex-col justify-center items-center h-full px-4 md:px-8 pt-24">
-      <div className="text-center mb-4">
+      <Image
+        className="absolute block w-full -top-[200px] right-0 rotate-180 z-0"
+        src="/chart.svg"
+        width={950}
+        height={600}
+        alt="Next.js Logo"
+        priority
+      />
+      <div className="text-center mb-4 z-10">
         <h1 className="font-semibold text-4xl lg:text-4xl mb-4 lg:mb-8">{t('title')}</h1>
         <p className="max-w-lg mx-auto">{t('description')}</p>
       </div>
-      <div className="flex-1 w-full lg:w-4/5 mx-auto">
+      <div className="flex-1 w-full lg:w-4/5 mx-auto z-10">
         <ContinentsBarchart dataset={data} />
       </div>
     </main>
