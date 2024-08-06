@@ -7,10 +7,6 @@ import HeroCard from '@/components/hero-cards/HeroCard';
 import { CovidGlobalData } from '@/types/requests';
 import { convertToDateTime } from '@/utils/utils';
 
-// TODO add not found page
-// Fix fetch error handling
-// Todo Mobile menu
-
 async function getCovidGlobalData() {
   const res = await fetch('https://disease.sh/v3/covid-19/all', {
     cache: 'no-store',
