@@ -6,7 +6,7 @@ import Chart from 'chart.js/auto';
 
 import { ChartProps } from '@/types/chartjs';
 
-const ChartJsBaseChart: React.FC<ChartProps> = ({ type, data, options }) => {
+const ChartJsBaseChart = ({ type, data, options }: ChartProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
