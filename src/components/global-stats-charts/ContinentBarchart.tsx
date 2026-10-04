@@ -2,6 +2,9 @@
 
 import React from 'react';
 
+import { LoaderCircle } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+
 import {
   Select,
   SelectContent,
@@ -12,8 +15,6 @@ import {
 import ChartJsBaseChart from '@/components/ui-chartjs/BaseChart';
 import { ContinentCovidStats } from '@/types/requests';
 import { generateShades } from '@/utils/chart-color-shade';
-import { LoaderCircle } from 'lucide-react';
-import { useTranslations } from 'next-intl';
 
 interface ContinentsBarchartProps {
   dataset: ContinentCovidStats[];
@@ -31,9 +32,9 @@ interface Data {
 }
 
 enum DataOptions {
-  'CASES' = 'cases',
-  'DEATHS' = 'deaths',
-  'RECOVERED' = 'recovered',
+  CASES = 'cases',
+  DEATHS = 'deaths',
+  RECOVERED = 'recovered',
 }
 
 const ContinentsBarchart = ({ dataset }: ContinentsBarchartProps) => {
