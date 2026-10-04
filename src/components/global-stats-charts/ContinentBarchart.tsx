@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import {
   Select,
@@ -38,7 +38,6 @@ enum DataOptions {
 
 const ContinentsBarchart = ({ dataset }: ContinentsBarchartProps) => {
   const t = useTranslations('ContinentPage');
-  const [data, setData] = React.useState<Data>();
   const [selectedDataFilter, setSelectedDataFilter] = React.useState<string>(
     DataOptions.CASES,
   );
@@ -55,7 +54,9 @@ const ContinentsBarchart = ({ dataset }: ContinentsBarchartProps) => {
     },
   };
 
-  useEffect(() => {
+  // Derived from the props and the selected filter, so it is computed during
+  // render rather than mirrored into state from an effect.
+  const data = React.useMemo<Data>(() => {
     const shades = generateShades('#146ef5', '#b4d2ff', Object.keys(dataset).length);
 
     const dataOptions: { [key: string]: { label: string; data: number[] } } = {};
@@ -83,7 +84,7 @@ const ContinentsBarchart = ({ dataset }: ContinentsBarchartProps) => {
         break;
     }
 
-    setData({
+    return {
       labels: dataset.map((row) => row.continent),
       datasets: [
         {
@@ -94,8 +95,8 @@ const ContinentsBarchart = ({ dataset }: ContinentsBarchartProps) => {
           borderWidth: 1,
         },
       ],
-    });
-  }, [dataset, selectedDataFilter]);
+    };
+  }, [dataset, selectedDataFilter, t]);
 
   return (
     <div className="flex flex-col gap-4 md:gap-8 justify-center items-center">
