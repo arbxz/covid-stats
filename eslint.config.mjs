@@ -26,9 +26,18 @@ export default [
       "simple-import-sort/imports": [
         "error",
         {
-          groups: [["^react"], ["^antd"], ["^@?\w"], ["@/(.*)"], ["^[./]"]],
+          groups: [["^react"], ["^antd"], ["^@?\\w"], ["@/(.*)"], ["^[./]"]],
         },
       ],
+    },
+  },
+  {
+    // The core JS rules misread TypeScript (no-unused-vars crashes on it);
+    // TypeScript itself reports unused and undefined names.
+    files: ["**/*.ts", "**/*.tsx"],
+    rules: {
+      "no-unused-vars": "off",
+      "no-undef": "off",
     },
   },
   { ignores: [".next/**", ".vercel/**", "node_modules/**", "next-env.d.ts"] },
