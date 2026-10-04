@@ -45,7 +45,7 @@ export default async function Home() {
             <p className="text-md md:text-lg mb-4">{t('description')}</p>
             <div className="lg:text-right">
               <a
-                className="flex md:inline-block justify-center items-center px-4 py-1 border-custom-primary text-custom-primary hover:shadow-md transition-all duration-500 border-[1px] rounded-full text-xs"
+                className="flex md:inline-block justify-center items-center px-4 py-1 border-custom-primary text-custom-primary hover:shadow-md transition-all duration-500 border rounded-full text-xs"
                 href="https://disease.sh"
                 target="_blank"
               >

@@ -5,7 +5,7 @@ const Footer = () => {
       <a
         href="https://arbxz.dev"
         target="_blank"
-        className="border-custom-primary border-[1px] rounded-full px-8 py-2 text-custom-primary hover:bg-primary-foreground bg-custom-primary hover:text-custom-primary text-white hover:shadow-md transition-all duration-300"
+        className="border-custom-primary border rounded-full px-8 py-2 text-custom-primary hover:bg-primary-foreground bg-custom-primary hover:text-custom-primary text-white hover:shadow-md transition-all duration-300"
       >
         arbxz.dev
       </a>

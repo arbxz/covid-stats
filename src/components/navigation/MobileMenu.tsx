@@ -25,7 +25,7 @@ const MobileMenu = () => {
         className={`${isOpen ? 'block' : 'hidden'} fixed left-0 top-0 w-screen bg-primary-foreground h-screen overflow-scroll z-40`}
       >
         <ul className="flex flex-col items-center justify-cente p-4 gap-4 w-full">
-          <li className="flex justify-start bg-custom-primary p-4 rounded-md gap-4 items-center mb-8 shadow w-full">
+          <li className="flex justify-start bg-custom-primary p-4 rounded-md gap-4 items-center mb-8 shadow-sm w-full">
             <LocaleSwitcher />
             <ModeToggle />
             <Button

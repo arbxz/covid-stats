@@ -23,7 +23,7 @@ const Page = async () => {
   return (
     <main className=" flex-1 flex flex-col justify-center items-center h-full px-4 md:px-8 pt-24">
       <Image
-        className="absolute block w-full -top-[200px] right-0 rotate-180 z-0"
+        className="absolute block w-full top-[-200px] right-0 rotate-180 z-0"
         src="/chart.svg"
         width={950}
         height={600}

@@ -11,7 +11,7 @@ const Navigation = () => {
     <nav className="fixed flex items-center justify-between gap-4 w-screen p-4 z-50 glass">
       <Link
         href="/"
-        className="group bg-custom-primary text-white dark:bg-primary-foreground border-custom-primary flex gap-4 items-center px-4 py-2 border-[1px] rounded-full"
+        className="group bg-custom-primary text-white dark:bg-primary-foreground border-custom-primary flex gap-4 items-center px-4 py-2 border rounded-full"
       >
         <Activity size={16} />
         <span className="text-sm">covid-stats</span>
@@ -20,7 +20,7 @@ const Navigation = () => {
         <ul className="flex items-center gap-4 text-sm">
           <li>
             <Link
-              className="py-2 hover:pb-4 border-custom-primary border-b-[1px] hover:border-b-2 transition-all duration-300"
+              className="py-2 hover:pb-4 border-custom-primary border-b hover:border-b-2 transition-all duration-300"
               href="/global-data"
             >
               Continent data
@@ -28,7 +28,7 @@ const Navigation = () => {
           </li>
           <li>
             <Link
-              className="py-2 hover:pb-4 border-custom-primary border-b-[1px] hover:border-b-2 transition-all duration-300"
+              className="py-2 hover:pb-4 border-custom-primary border-b hover:border-b-2 transition-all duration-300"
               href="/history-data"
             >
               History

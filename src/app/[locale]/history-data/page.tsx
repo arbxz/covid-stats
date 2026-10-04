@@ -53,7 +53,7 @@ const Page = async () => {
 
   return (
     <main className="relative flex-1 flex flex-col px-4 md:px-8 pt-24 md:pt-24 h-full">
-      <div className="mb-4 md:max-w-96 md:p-8 p-4 rounded-md bg-custom-primary text-primary-foreground shadow">
+      <div className="mb-4 md:max-w-96 md:p-8 p-4 rounded-md bg-custom-primary text-primary-foreground shadow-sm">
         <h2 className="text-4xl font-bold mb-4">Statistics for COVID-19</h2>
         <p>
           The following chart shows the rise in covid cases between the years 2020-2024.
