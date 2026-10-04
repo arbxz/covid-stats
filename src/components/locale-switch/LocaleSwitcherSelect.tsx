@@ -30,7 +30,14 @@ export default function LocaleSwitcherSelect({ defaultValue, label }: Props) {
   function onSelectChange(value: string) {
     const nextLocale = value;
     startTransition(() => {
-      router.replace({ pathname, query: params }, { locale: nextLocale });
+      // Route params belong in `params`; passing them as `query` appended
+      // ?locale=<old> to the URL on every switch.
+      router.replace(
+        // @ts-expect-error -- next-intl only checks `params` against
+        // `pathname` when it is a literal; here it is the current route.
+        { pathname, params },
+        { locale: nextLocale },
+      );
     });
   }
 
