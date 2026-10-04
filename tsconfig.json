@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "src/",
     "lib": [
       "dom",
       "dom.iterable",
@@ -24,19 +23,19 @@
     ],
     "paths": {
       "@/*": [
-        "./*"
+        "./src/*"
       ],
       "@/components/*": [
-        "./components/*"
+        "./src/components/*"
       ],
       "@/lib/*": [
-        "./lib/*"
+        "./src/lib/*"
       ],
       "@/constants/*": [
-        "./constants/*"
+        "./src/constants/*"
       ],
       "@/types/*": [
-        "./types/*"
+        "./src/types/*"
       ]
     },
     "target": "ES2017"
